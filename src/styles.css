@@ -140,3 +140,13 @@
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+@utility btn-lumen {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 48px; padding-inline: 24px; border-radius: 6px; font-weight: 600; font-size: 0.9375rem;
+  border: 1px solid var(--foreground); transition: background-color 220ms ease-out, color 220ms ease-out, opacity 220ms ease-out;
+}
+@utility btn-ink { background: var(--primary); color: var(--primary-foreground); &:hover { background: color-mix(in oklab, var(--primary) 86%, white); } }
+@utility btn-outline-ink { background: transparent; color: var(--foreground); &:hover { background: color-mix(in oklab, var(--foreground) 6%, transparent); } }
+@utility btn-on-dark { background: var(--dark-foreground); color: var(--dark-surface); border-color: var(--dark-foreground); &:hover { opacity: 0.9; } }
+@utility link-underline { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; &:hover { text-decoration-thickness: 2px; } }
